@@ -1,6 +1,6 @@
 
 
-[比特币相关资料](#ziliao.md)
+[比特币相关资料](https://github.com/sunnycn2013/BiteDoc/blob/master/ziliao.md)
 
 ### 1.取得钱包相关信息
 
