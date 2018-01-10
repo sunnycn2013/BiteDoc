@@ -98,6 +98,7 @@ curl --user bitbs123 --data-binary '{"jsonrpc": "1.0","id": "curltest","method":
 
 //返回比特币钱包地址
 {"result":"1BAmBDQeqdw5C4J9iPz9x86RfuE8DdrvrZ","error":null,"id":"curltest"}
+{"result":"1BMAHoexWAVShYJDwxso38infctpC62kS","error":null,"id":"curltest"}
 ```
 
 
