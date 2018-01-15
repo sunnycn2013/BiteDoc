@@ -24,17 +24,20 @@ https://github.com/ethereum/go-ethereum/wiki/Management-APIs
 
 ### 1.开辟钱包账户地址
 
+```
+
 {"jsonrpc":"2.0","method":"personal_newAccount", "params":[“12345”], "id": 1}
 
 
 return json:
 {"jsonrpc":"2.0","id":1,"result":"0x381309d3030e1882648668704124facf77970f25"}
 
-
+```
 
 ### 2.取得账户列表
 
 
+```
 请求参数
 {"jsonrpc":"2.0","method":"eth_accounts", "params":"[]", "id": 1}
 
@@ -43,7 +46,7 @@ return json:
 {"jsonrpc":"2.0","id":1,"result":["0xead9bbbdd263d03bf8e1f0611b7ae0d7fa3abc55","0x68bdd512eae5425987ff5a7d892e30bdecb912c9","0xff97cfaf08abf18aaab69ff8d038ca7101acde0f","0x6f61eac3f037864eec29831a4a18aac41eec25bb","0x9c88b0e1d92c663e9e608ce6b2d0c9da88d4c7a9","0x8738bf660f98be83016579dbec72594debd7a45a"]}
 执行
 
-
+```
 
 ### 4.取得钱包相关信息 余额
 
