@@ -6,8 +6,18 @@ method ： 函数名
 params： 请求入参数
 id: 应该是networkdID  1代表
 
+./geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
+
+geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
+
+--rpccorsdomain *
+
+geth --rpc --rpccorsdomain "*" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
 
 
+http://localhost:8545
+
+cd ~/
 ETH RPC  可用API  
 
 https://etherscan.io/
@@ -48,7 +58,7 @@ return json:
 
 ```
 
-### 4.取得钱包相关信息 余额
+### 3.取得钱包相关信息 余额
 
 
 
@@ -59,10 +69,24 @@ eth_getBalance()
 
 命令行请求：
 
-{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}
-
-
-return json:{"jsonrpc":"2.0","id":1,"result":"0x0"}
+{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x91ba8f25e03f9a4765d87162dbd0849115faf0b3", "latest"],"id":1}
 
 
 
+参数:
+return json:{"jsonrpc":"2.0","id":1,"result":"0x38d7ea4c68000"}
+余额（wei） 转成ETH
+
+> web3.fromWei("0x38d7ea4c68000","ether")
+"0.001"
+
+### 4.查看当前矿费  eth_gasPrice
+
+{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1}
+
+return json:{"jsonrpc":"2.0","id":1,"result":"0x14b8d03a00"}
+
+0x14b8d03a00 
+
+> web3.fromWei("0x14b8d03a00","ether")
+"0.000000089"   （ETH）
