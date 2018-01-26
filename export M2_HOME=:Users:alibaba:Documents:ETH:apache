@@ -1,0 +1,19 @@
+export M2_HOME=/Users/alibaba/Documents/ETH/apache-maven-3.5.2/bin
+export PATH=$PATH:$M2_HOME/bin
+
+
+export M2_HOME="/Users/during/Documents/Software/apache-maven-3.5.0"
+export PATH="$M2_HOME/bin:$PATH"
+
+
+
+	@Override
+	public JSONObject getAbstractMethod(String method, String paramsString) throws Exception{
+		if(method.isEmpty()) {
+			String json = "{\"method is null\":\"msg\"}";  
+			return JSONObject.fromObject(json);
+		}
+		String s = ethutils.main(method, paramsString);
+		JSONObject json = JSONObject.fromObject(s); 
+        return json;
+	}

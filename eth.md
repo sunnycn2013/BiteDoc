@@ -6,16 +6,26 @@ method ： 函数名
 params： 请求入参数
 id: 应该是networkdID  1代表
 
+https://www.51chain.net/portal/book/EthereumFrontierGuide/Commandlineinterfaceandoptions-120.html
+
+
+mac：
+./geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/Users/alibaba/Documents/ETH/geth/gethData"
+
+
 ./geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
 
-geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
+nohup geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData" &
 
 --rpccorsdomain *
 
 geth --rpc --rpccorsdomain "*" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
 
 
-http://localhost:8545
+curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' -H 'content-type: application/json;' http://localhost:8545
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x91ba8f25e03f9a4765d87162dbd0849115faf0b3", "latest"],"id":1}' -H 'content-type: application/json;' http://localhost:8545
 
 cd ~/
 ETH RPC  可用API  

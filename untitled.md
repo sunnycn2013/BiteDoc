@@ -1,0 +1,1 @@
+geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/Users/alibaba/Documents/ETH/geth/gethData"
