@@ -6,32 +6,18 @@ method ： 函数名
 params： 请求入参数
 id: 应该是networkdID  1代表
 
-https://www.51chain.net/portal/book/EthereumFrontierGuide/Commandlineinterfaceandoptions-120.html
+### 资料
+
+[以太坊钱包：Geth使用教程](http://8btc.com/thread-29530-1-1.html)
+[私有链的搭建](http://www.cnblogs.com/zl03jsj/p/6858928.html)
+[Windows系统以太坊区块链私链的搭建启动、数据抓取、浏览器数据显示](https://bitshuo.com/topic/587d99af4dea36e72c1b3811)
+[以太坊文档（中文版](https://www.51chain.net/portal/book/EthereumFrontierGuide/Commandlineinterfaceandoptions-120.html)
+
+[以太坊（浏览器）](https://etherscan.io/)
 
 
-mac：
-./geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/Users/alibaba/Documents/ETH/geth/gethData"
 
-
-./geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
-
-nohup geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData" &
-
---rpccorsdomain *
-
-geth --rpc --rpccorsdomain "*" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
-
-
-curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' -H 'content-type: application/json;' http://localhost:8545
-
-
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x91ba8f25e03f9a4765d87162dbd0849115faf0b3", "latest"],"id":1}' -H 'content-type: application/json;' http://localhost:8545
-
-cd ~/
-ETH RPC  可用API  
-
-https://etherscan.io/
-
+###  官方 API
 以太坊 JSON-RPC 
 https://github.com/ethereum/wiki/wiki/JSON-RPC
 
@@ -100,3 +86,26 @@ return json:{"jsonrpc":"2.0","id":1,"result":"0x14b8d03a00"}
 
 > web3.fromWei("0x14b8d03a00","ether")
 "0.000000089"   （ETH）
+
+
+
+mac：
+./geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/Users/alibaba/Documents/ETH/geth/gethData"
+
+
+./geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
+
+nohup geth --rpc --rpcaddr "localhost" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData" &
+
+--rpccorsdomain *
+
+geth --rpc --rpccorsdomain "*" --rpcapi  "db,eth,net,web3,personal,admin,miner" --datadir "/usr/local/geth/geth-linux-amd64-1.7.3-4bb3c89d/gethData"
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' -H 'content-type: application/json;' http://localhost:8545
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x91ba8f25e03f9a4765d87162dbd0849115faf0b3", "latest"],"id":1}' -H 'content-type: application/json;' http://localhost:8545
+
+cd ~/
+ETH RPC  可用API  
