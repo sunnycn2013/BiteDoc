@@ -13,7 +13,7 @@ geth --rpc --rpcaddr "0.0.0.0" --rpcapi  "db,eth,net,web3,personal,admin,miner" 
 ```
 
 双击后控制台如图：
-![启动图](https://github.com/sunnycn2013/BiteDoc/blob/master/geth_start.png?raw=true)
+![启动图](https://github.com/sunnycn2013/BiteDoc/blob/master/geth_start1.png?raw=true)
 
 ### 二、测试本地geth服务
 
