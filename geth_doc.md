@@ -1,12 +1,19 @@
 ### 一、本地部署geth
 
-将geth.zip解压到D:/ETH 目录下， （D：/ETH/*）， 双击批处理文件即可启动JSON-RPC服务
+将geth.zip解压到D:/ETH 目录下， （D：/ETH/*）， 
+
+![文件结构](https://github.com/sunnycn2013/BiteDoc/blob/master/bat.png?raw=true)
+
+双击批处理文件即可启动JSON-RPC服务
 
 eth.bat  文件：
 
 ```
 geth --rpc --rpcaddr "0.0.0.0" --rpcapi  "db,eth,net,web3,personal,admin,miner"  --rpcport 23116 --datadir "D:\ETH"
 ```
+
+双击后控制台如图：
+![启动图](https://github.com/sunnycn2013/BiteDoc/blob/master/geth_start.png?raw=true)
 
 ### 二、测试本地geth服务
 
@@ -48,6 +55,7 @@ web3_clientVersion
 ```
 
 
+![调用结果](https://github.com/sunnycn2013/BiteDoc/blob/master/geth_cmd.png?raw=true)
 跑通上述命令，本地环境应该测试通过，
 
 <stong> 注意端口号 </stong>
